@@ -1,0 +1,23 @@
+<h1>Haute CoutURED Meats</h1>
+
+<h2>
+<table>
+
+<% @pictures.each do |pic| %>
+  <tr>
+    <td><%= link_to image_tag(pic.url, :width => 240, :height => 240), picture_url(pic.id) %></td>
+    <td><%= pic.name %></td>
+<br>
+    <td><%= link_to 'Show', pic %>|</td>
+    <td><%= link_to 'Edit', edit_picture_path(pic) %>|</td>
+    <td><%= link_to 'Destroy', pic, method: :delete, data: { confirm: 'Do you really want to destroy this masterpiece?' } %></td>
+    </brd
+  </tr>
+<% end %>
+</table>
+
+</br>
+
+<%= link_to 'Add Your Favorite Haute CoutURED Meat', new_picture_path %>
+
+</h2>

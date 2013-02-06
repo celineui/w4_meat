@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <%= image_tag(@picture.url,:width => 700) %>
+</p>
+<h2>
+<p>
+  <b><%= @picture.name %></b>
+</p>
+<p>
+  <b><%= @picture.title %></b>
+</p>
+<p>
+<b><%= link_to "click here for more info", @picture.content %></b>
+</p>
+<%= link_to 'Edit', edit_picture_path(@picture) %> |
+<%= link_to 'Home', pictures_path %>
+</h2>
